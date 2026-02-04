@@ -84,9 +84,7 @@ extension UIView: PDFPageRenderable {
             }
         }
 
-        if let webView = self as? WKWebView {
-            try renderScrollView(webView.scrollView, area: area)
-        } else if let webView = self as? WKWebView {
+		if let webView = self as? WKWebView {
             try renderScrollView(webView.scrollView, area: area)
         } else if let scrollView = self as? UIScrollView {
             try renderScrollView(scrollView, area: area)
